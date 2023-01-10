@@ -1,6 +1,6 @@
 # uC1_2022_Amaya_Ruiz_Renan_Esteban
 **Universidad Nacional De Piura**
-**Ing. Electrónica y telecomunicaciones**
+-**Ing. Electrónica y telecomunicaciones**
 
  - [ ] ***Curso:*** Microcontroladores I
 
