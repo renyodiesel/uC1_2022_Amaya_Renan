@@ -1,7 +1,6 @@
 ;-------------------------------------------------------------------------------
     ;@file    Ejercicio_2.s
-    ;@brief   Corrimientos de Leds con interrupciones 
-    ;         de alta y baja prioridad(Assembly language)
+    ;@brief   interrupciones de alta y baja prioridad(Assembly language)
     ;@date    28/01/2023
     ;@author  Amaya Ruiz Renan Esteban
     ;MPLAB X IDE v6.00
@@ -11,7 +10,7 @@
     
     
 PROCESSOR 18F57Q84
-#include "Bit_Config.inc"   ;/config statements should precede project file includes./
+#include "Bit_Config.inc"   /config statements should precede project file includes./
 #include <xc.inc>
     
 PSECT resetVect,class=CODE,reloc=2
@@ -220,14 +219,14 @@ PSECT resetVect,class=CODE,reloc=2
  table:
       ADDWF   PCL,1,0
       RETLW   01111110B	; offset: 0
-      RETLW   10111101B	; offset: 1
-      RETLW   11011011B	; offset: 2
-      RETLW   11100111B	; offset: 3
+      RETLW   10111100B	; offset: 1
+      RETLW   00011000B	; offset: 2
+      RETLW   00000000B	; offset: 3
       RETLW   11111111B	; offset: 4
       RETLW   11100111B	; offset: 5
-      RETLW   11011011B	; offset: 6
-      RETLW   10111101B	; offset: 7
-      RETLW   01111110B	; offset: 8
+      RETLW   11000011B	; offset: 6
+      RETLW   10000001B	; offset: 7
+      RETLW   00000000B	; offset: 8
       RETLW   11111111B	; offset: 9
   ;-----------------------------------------------------------------------------    
  Delay_250ms:                          ;  1 Call ---> 2 TCY

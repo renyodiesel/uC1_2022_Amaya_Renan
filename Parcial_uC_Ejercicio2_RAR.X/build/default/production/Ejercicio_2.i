@@ -3,8 +3,7 @@
 # 1 "Ejercicio_2.s" 2
 ;-------------------------------------------------------------------------------
     ;@file Ejercicio_2.s
-    ;@brief Corrimientos de Leds con interrupciones
-    ; de alta y baja prioridad(Assembly language)
+    ;@brief interrupciones de alta y baja prioridad(Assembly language)
     ;@date 28/01/2023
     ;@author Amaya Ruiz Renan Esteban
     ;MPLAB X IDE v6.00
@@ -156,7 +155,7 @@ PROCESSOR 18F57Q84
 
 ; CONFIG35
   CONFIG CRCERESL = hFF ; Non-Boot Sector Expected Result for CRC on boot bits 7-0 (Bits 7:0 of CRCERES are 0xFF)
-# 15 "Ejercicio_2.s" 2
+# 14 "Ejercicio_2.s" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\xc.inc" 1 3
 
 
@@ -47491,7 +47490,7 @@ stk_offset SET 0
 auto_size SET 0
 ENDM
 # 5 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\xc.inc" 2 3
-# 16 "Ejercicio_2.s" 2
+# 15 "Ejercicio_2.s" 2
 
 PSECT resetVect,class=CODE,reloc=2
  resetVect:
@@ -47699,14 +47698,14 @@ PSECT resetVect,class=CODE,reloc=2
  table:
       ADDWF PCL,1,0
       RETLW 01111110B ; offset: 0
-      RETLW 10111101B ; offset: 1
-      RETLW 11011011B ; offset: 2
-      RETLW 11100111B ; offset: 3
+      RETLW 10111100B ; offset: 1
+      RETLW 00011000B ; offset: 2
+      RETLW 00000000B ; offset: 3
       RETLW 11111111B ; offset: 4
       RETLW 11100111B ; offset: 5
-      RETLW 11011011B ; offset: 6
-      RETLW 10111101B ; offset: 7
-      RETLW 01111110B ; offset: 8
+      RETLW 11000011B ; offset: 6
+      RETLW 10000001B ; offset: 7
+      RETLW 00000000B ; offset: 8
       RETLW 11111111B ; offset: 9
   ;-----------------------------------------------------------------------------
  Delay_250ms: ; 1 Call ---> 2 TCY
